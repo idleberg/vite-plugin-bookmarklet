@@ -46,7 +46,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          deno install --allow-all
+          deno install --allow-scripts=npm:lefthook,npm:@biomejs/biome
           deno cache npm:${{ matrix.vite-version }} --allow-scripts
 
       - name: Install Playwright browsers
