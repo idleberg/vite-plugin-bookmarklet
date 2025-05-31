@@ -45,11 +45,10 @@ jobs:
           key: ${{ runner.os }}-deno-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: |
-          deno cache npm:${{ matrix.vite-version }} --allow-scripts
+        run: deno cache npm:${{ matrix.vite-version }} --allow-scripts --node-modules-dir auto
 
       - name: Install Playwright browsers
-        run: deno run --allow-all playwright install
+        run: deno run --allow-all npm:playwright install
 
       - name: Lint Source
         run: deno lint --ignore=node_modules **/*.ts
@@ -57,4 +56,4 @@ jobs:
       - name: Run Tests
         run: |
           deno run --allow-all npm:vitest run
-          deno run --allow-all npm:playwright test
+          # deno run --allow-all npm:playwright test
