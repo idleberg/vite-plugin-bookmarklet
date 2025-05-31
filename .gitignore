@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.eslintcache
+
+# Development
+.env
+vite*.config.ts.timestamp-*
+
+# Test
+test-results/
