@@ -10,10 +10,7 @@
   },
   "keywords": [
     "vite-plugin",
-    "certificate",
-    "https",
-    "ssl",
-    "tls"
+    "bookmarklet"
   ],
   "type": "module",
   "exports": {
