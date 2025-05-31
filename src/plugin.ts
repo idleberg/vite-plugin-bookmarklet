@@ -1,4 +1,4 @@
-import { type Plugin, transformWithEsbuild, transformWithOxc } from 'vite';
+import { type Plugin, transformWithEsbuild } from 'vite';
 
 /**
  * A Vite plugin that transforms JavaScript files into bookmarklets.
