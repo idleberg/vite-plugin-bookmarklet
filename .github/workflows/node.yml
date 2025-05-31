@@ -61,7 +61,7 @@ jobs:
           pnpm install ${{ matrix.vite-version }}
 
       - name: Install Playwright browsers
-        run: pnpm exec playwright install
+        run: pnpm exec playwright install --with-deps
 
       - name: Lint Source
         run: pnpm run --if-present lint

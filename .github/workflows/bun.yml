@@ -47,7 +47,7 @@ jobs:
           bun install ${{ matrix.vite-version }}
 
       - name: Install Playwright browsers
-        run: bunx playwright install
+        run: bunx playwright install --with-deps
 
       - name: Lint Source
         run: bun run --if-present lint
