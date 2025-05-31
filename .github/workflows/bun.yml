@@ -46,6 +46,9 @@ jobs:
           bun install --frozen-lockfile --strict-peer-dependencies
           bun install ${{ matrix.vite-version }}
 
+      - name: Install Playwright browsers
+        run: bunx playwright install
+
       - name: Lint Source
         run: bun run --if-present lint
 
