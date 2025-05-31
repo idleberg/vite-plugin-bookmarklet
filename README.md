@@ -53,7 +53,7 @@ The following example uses Svelte syntax, but it should be universally understan
 
 ### TypeScript
 
-To avoid type errors, add the following to your `tsconfig.json`
+To avoid type errors, add the following to your `tsconfig.json`:
 
 ```json
 {
@@ -66,7 +66,3 @@ To avoid type errors, add the following to your `tsconfig.json`
 ## License
 
 This work is licensed under [The MIT License](LICENSE).
-
-```
-
-```
