@@ -22,7 +22,7 @@ export default function BookmarkletPlugin(): Plugin {
 					code: `export default 'javascript:(function(){${encodeURIComponent(transformed.code)}})()'`,
 					id,
 				};
-			} catch (error) {
+			} catch (_error) {
 				this.error(`Failed to load file: ${id}`);
 			}
 		},
