@@ -8,11 +8,6 @@ export default defineConfig({
 		port: 7007,
 	},
 	test: {
-		browser: {
-			provider: 'playwright',
-			enabled: true,
-			instances: [{ browser: 'chromium' }],
-		},
 		include: ['unit/*.spec.ts'],
 	},
 });
