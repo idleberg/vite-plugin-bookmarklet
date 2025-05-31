@@ -46,7 +46,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          deno install
+          deno install --allow-all
           deno cache npm:${{ matrix.vite-version }} --allow-scripts
 
       - name: Install Playwright browsers
