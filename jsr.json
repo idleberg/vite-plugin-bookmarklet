@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/vite-plugin-bookmarklet",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"exports": "./src/plugin.ts",
 	"publish": {
 		"include": ["src/", "client.d.ts", "jsr.json", "LICENSE", "README.md"]
