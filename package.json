@@ -57,10 +57,10 @@
     "@types/node": "^22.15.21",
     "@vitest/browser": "^3.2.4",
     "concurrently": "^9.1.2",
-    "lefthook": "^1.11.13",
+    "lefthook": "^1.11.14",
     "np": "^10.2.0",
     "playwright": "^1.53.1",
-    "tsdown": "^0.12.4",
+    "tsdown": "^0.12.8",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vitest": "^3.2.4"
