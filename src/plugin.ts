@@ -13,13 +13,18 @@ export default function BookmarkletPlugin(): Plugin {
 				return null;
 			}
 
-			const transformed = await transformWithEsbuild(code, id, {
-				minify: true,
-			});
+			const transformed = await transformWithEsbuild(
+				`export default 'javascript:(function(){${encodeURIComponent(code)}})()'`,
+				id,
+				{
+					minify: true,
+				},
+			);
 
 			try {
 				return {
-					code: `export default 'javascript:(function(){${encodeURIComponent(transformed.code)}})()'`,
+					code: transformed.code,
+					map: transformed.map,
 					id,
 				};
 			} catch (_error) {
