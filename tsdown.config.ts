@@ -8,7 +8,6 @@ export default defineConfig((options) => {
 		clean: isProduction,
 		dts: isProduction,
 		entry: ['src/plugin.ts'],
-		external: ['esbuild'],
 		format: 'esm',
 		minify: isProduction,
 	};
