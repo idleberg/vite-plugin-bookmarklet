@@ -8,21 +8,17 @@
 [![CI: Node](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-bookmarklet/node.yml?logo=nodedotjs&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-bookmarklet/actions/workflows/node.yml)
 [![CI: Deno](https://img.shields.io/github/actions/workflow/status/idleberg/vite-plugin-bookmarklet/deno.yml?logo=deno&logoColor=white&style=for-the-badge)](https://github.com/idleberg/vite-plugin-bookmarklet/actions/workflows/deno.yml)
 
-## Installation
-
-On NodeJS or Bun, install the plugin and its peer dependencies from npm:
+## Installation 💿
 
 ```shell
+# npm
 npm install vite-plugin-bookmarklet
-```
 
-On Deno you will likely want to use JSR:
-
-```shell
+# jsr
 deno add jsr:@idleberg/vite-plugin-bookmarklet
 ```
 
-## Usage
+## Usage 🚀
 
 With this plugin, you can append the `?bookmarklet` to any JavaScript/TypeScript import.
 
@@ -63,6 +59,6 @@ To avoid type errors, add the following to your `tsconfig.json`:
 }
 ```
 
-## License
+## License 📜
 
 This work is licensed under [The MIT License](LICENSE).
