@@ -1,4 +1,6 @@
-import { type Plugin, transformWithEsbuild } from 'vite';
+import { readFile } from 'fs/promises';
+import type { Plugin } from 'vite';
+import { bookmarkletRE, cleanUrl } from './vite-shims.ts';
 
 /**
  * A Vite plugin that transforms JavaScript files into bookmarklets.
@@ -8,28 +10,24 @@ export default function BookmarkletPlugin(): Plugin {
 	return {
 		name: 'vite-plugin-bookmarklet',
 
-		async transform(code, id) {
-			if (!id.endsWith('?bookmarklet')) {
-				return null;
-			}
-
-			const transformed = await transformWithEsbuild(
-				`export default 'javascript:(function(){${encodeURIComponent(code)}})()'`,
-				id,
-				{
-					minify: true,
+		load: {
+			filter: {
+				id: {
+					// Rollup convention, this ID should be handled by the
+					// plugin that marked it with \0
+					exclude: /^\0/,
 				},
-			);
+			},
+			async handler(id) {
+				if (bookmarkletRE.test(id)) {
+					const file = cleanUrl(id);
+					this.addWatchFile(file);
 
-			try {
-				return {
-					code: transformed.code,
-					map: transformed.map,
-					id,
-				};
-			} catch (_error) {
-				this.error(`Failed to load file: ${id}`);
-			}
+					const code = await readFile(file, 'utf-8');
+
+					return `export default ${JSON.stringify(`javascript:(function(){${encodeURIComponent(code)}})()`)}`;
+				}
+			},
 		},
 	};
 }
