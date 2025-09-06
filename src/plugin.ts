@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises';
+import { readFile } from 'node:fs/promises';
 import type { Plugin } from 'vite';
 import { bookmarkletRE, cleanUrl } from './vite-shims.ts';
 
