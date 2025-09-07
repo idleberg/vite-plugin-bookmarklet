@@ -24,7 +24,7 @@ With this plugin, you can append the `?bookmarklet` to any JavaScript/TypeScript
 
 > [!TIP]
 > Treat your bookmarklet like any other JavaScript file, the plugin will do the rest:
-> - encode the code
+> - URI-encode the code
 > - wrap it inside an [IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
 > - create a [JavaScript URL](https://developer.mozilla.org/docs/Web/URI/Reference/Schemes/javascript)
 
