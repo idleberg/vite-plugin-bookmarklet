@@ -34,11 +34,6 @@ export default defineConfig({
 	plugins: [bookmarklet()],
 });
 ```
-
-In your application, you can now import the bookmarklet code using the `?bookmarklet` suffix.
-
-```javascript
-import MyBookmarklet from './my-bookmarklet?bookmarklet';
 ```
 
 See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder vanilla JavaScript and framework-specific implementations.
