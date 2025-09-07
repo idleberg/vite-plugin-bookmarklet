@@ -22,6 +22,12 @@ deno add jsr:@idleberg/vite-plugin-bookmarklet
 
 With this plugin, you can append the `?bookmarklet` to any JavaScript/TypeScript import.
 
+> [!TIP]
+> Treat your bookmarklet like any other JavaScript file, the plugin will do the rest:
+> - encode the code
+> - wrap it inside an [IIFE](https://developer.mozilla.org/docs/Glossary/IIFE)
+> - create a [JavaScript URL](https://developer.mozilla.org/docs/Web/URI/Reference/Schemes/javascript)
+
 ### Example
 
 Create a `vite.config.ts`(or any other supported format):
@@ -34,6 +40,8 @@ export default defineConfig({
 	plugins: [bookmarklet()],
 });
 ```
+
+Take a look at the following implementations:
 
 <details>
 <summary>JavaScript</summary>
