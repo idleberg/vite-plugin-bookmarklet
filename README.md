@@ -35,7 +35,77 @@ export default defineConfig({
 });
 ```
 
-See the [examples folder](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) vanilla JavaScript and framework-specific implementations.
+<details>
+<summary>Astro</summary>
+
+```astro
+---
+import bookmarklet from './my-code?bookmarklet'
+---
+
+<a href={bookmarklet}>Run</a>
+```
+</details>
+
+<details>
+<summary>Lit</summary>
+
+```js
+import { LitElement,  html } from 'lit'
+import bookmarklet from './my-code?bookmarklet'
+
+@customElement('bookmarklet')
+export class Bookmarklet extends LitElement {
+	render() {
+		return html`
+			<a class="button" href=${bookmarklet}>
+				Run
+			</a>
+		`
+	}
+}
+```
+</details>
+
+<details>
+<summary>Preact</summary>
+
+```tsx
+import bookmarklet from './my-code?bookmarklet'
+
+export function Bookmarklet() {
+	return (
+		<a href={bookmarklet}>Run</a>
+	)
+}
+```
+</details>
+
+<details>
+<summary>Svelte</summary>
+
+```svelte
+<script>
+	import bookmarklet from './my-code?bookmarklet'
+</script>
+
+<a href={bookmarklet}>Run</a>
+```
+</details>
+
+<details>
+<summary>Vue</summary>
+
+```vue
+<script setup>
+	import bookmarklet from './my-code?bookmarklet'
+</script>
+
+<template>
+	<a :href={bookmarklet}>Run</a>
+</template>
+```
+</details>
 
 ### TypeScript
 
