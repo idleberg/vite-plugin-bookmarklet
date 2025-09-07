@@ -35,7 +35,7 @@ export default defineConfig({
 });
 ```
 
-In your application, you can now import the code running in your bookmarklet using the `?bookmarklet` suffix.
+In your application, you can now import the bookmarklet code using the `?bookmarklet` suffix.
 
 ```javascript
 import MyBookmarklet from './my-bookmarklet?bookmarklet';
