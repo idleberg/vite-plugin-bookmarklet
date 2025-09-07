@@ -41,7 +41,7 @@ In your application, you can now import the bookmarklet code using the `?bookmar
 import MyBookmarklet from './my-bookmarklet?bookmarklet';
 ```
 
-See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder more framework-specific integrations.
+See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder more.
 
 ### TypeScript
 
