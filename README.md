@@ -59,6 +59,6 @@ To avoid type errors, add the following to your `tsconfig.json`:
 }
 ```
 
-## License 📜
+## License ©️
 
 This work is licensed under [The MIT License](LICENSE).
