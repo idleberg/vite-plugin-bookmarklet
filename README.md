@@ -35,17 +35,7 @@ export default defineConfig({
 });
 ```
 
-The following example uses Svelte syntax, but it should be universally understandable:
-
-```svelte
-<script>
-	import helloWorld from 'hello-world?bookmarklet';
-</script>
-
-<a href={helloWorld}>
-	Hello, World
-</a>
-```
+See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder for more specific integrations.
 
 ### TypeScript
 
