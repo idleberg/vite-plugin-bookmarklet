@@ -35,11 +35,23 @@ export default defineConfig({
 });
 ```
 
-See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder for more specific integrations.
+In your application, you can now import the code running in your bookmarklet using the `?bookmarklet` suffix.
+
+```javascript
+import MyBookmarklet from './my-bookmarklet?bookmarklet';
+```
+
+See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder more framework-specific integrations.
 
 ### TypeScript
 
-To avoid type errors, add the following to your `tsconfig.json`:
+To avoid type errors, add the following line to your `vite-env.d.ts`:
+
+```ts
+/// <reference types="vite-plugin-bookmarklet/client" />
+```
+
+Alternatively, you define the types in your `tsconfig.ts`:
 
 ```json
 {
