@@ -50,7 +50,7 @@ Take a look at the following implementations:
 import bookmarklet from './my-code?bookmarklet'
 
 document.querySelector('#app').innerHTML = `
-	<a class="button" href="${bookmarklet}">
+	<a href="${bookmarklet}">
 		Run
 	</a>
 `
@@ -82,7 +82,7 @@ import bookmarklet from './my-code?bookmarklet'
 export class Bookmarklet extends LitElement {
 	render() {
 		return html`
-			<a class="button" href=${bookmarklet}>
+			<a href=${bookmarklet}>
 				Run
 			</a>
 		`
