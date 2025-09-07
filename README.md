@@ -137,7 +137,7 @@ To avoid type errors, add the following line to your `vite-env.d.ts`:
 /// <reference types="vite-plugin-bookmarklet/client" />
 ```
 
-Alternatively, you define the types in your `tsconfig.ts`:
+Alternatively, you can define the types in your `tsconfig.ts`:
 
 ```json
 {
