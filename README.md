@@ -36,14 +36,30 @@ export default defineConfig({
 ```
 
 <details>
+<summary>JavaScript</summary>
+
+```js
+import bookmarklet from './my-code?bookmarklet';
+
+document.querySelector('#app').innerHTML = `
+	<a class="button" href="${bookmarklet}">
+		Run
+	</a>
+`;
+```
+</details>
+
+<details>
 <summary>Astro</summary>
 
 ```astro
 ---
-import bookmarklet from './my-code?bookmarklet'
+import bookmarklet from './my-code?bookmarklet';
 ---
 
-<a href={bookmarklet}>Run</a>
+<a href={bookmarklet}>
+	Run
+</a>
 ```
 </details>
 
@@ -51,8 +67,8 @@ import bookmarklet from './my-code?bookmarklet'
 <summary>Lit</summary>
 
 ```js
-import { LitElement,  html } from 'lit'
-import bookmarklet from './my-code?bookmarklet'
+import { LitElement,  html } from 'lit';
+import bookmarklet from './my-code?bookmarklet';
 
 @customElement('bookmarklet')
 export class Bookmarklet extends LitElement {
@@ -61,7 +77,7 @@ export class Bookmarklet extends LitElement {
 			<a class="button" href=${bookmarklet}>
 				Run
 			</a>
-		`
+		`;
 	}
 }
 ```
@@ -71,12 +87,14 @@ export class Bookmarklet extends LitElement {
 <summary>Preact</summary>
 
 ```tsx
-import bookmarklet from './my-code?bookmarklet'
+import bookmarklet from './my-code?bookmarklet';
 
 export function Bookmarklet() {
 	return (
-		<a href={bookmarklet}>Run</a>
-	)
+		<a href={bookmarklet}>
+			Run
+		</a>
+	);
 }
 ```
 </details>
@@ -86,10 +104,12 @@ export function Bookmarklet() {
 
 ```svelte
 <script>
-	import bookmarklet from './my-code?bookmarklet'
+	import bookmarklet from './my-code?bookmarklet';
 </script>
 
-<a href={bookmarklet}>Run</a>
+<a href={bookmarklet}>
+	Run
+</a>
 ```
 </details>
 
@@ -98,11 +118,13 @@ export function Bookmarklet() {
 
 ```vue
 <script setup>
-	import bookmarklet from './my-code?bookmarklet'
+	import bookmarklet from './my-code?bookmarklet';
 </script>
 
 <template>
-	<a :href={bookmarklet}>Run</a>
+	<a :href={bookmarklet}>
+		Run
+	</a>
 </template>
 ```
 </details>
