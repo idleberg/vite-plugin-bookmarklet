@@ -33,12 +33,12 @@ With this plugin, you can append the `?bookmarklet` to any JavaScript/TypeScript
 Create a `vite.config.ts`(or any other supported format):
 
 ```javascript
-import { defineConfig } from "vite";
-import bookmarklet from "vite-plugin-bookmarklet";
+import { defineConfig } from "vite"
+import bookmarklet from "vite-plugin-bookmarklet"
 
 export default defineConfig({
 	plugins: [bookmarklet()],
-});
+})
 ```
 
 Take a look at the following implementations:
@@ -47,13 +47,13 @@ Take a look at the following implementations:
 <summary>JavaScript</summary>
 
 ```js
-import bookmarklet from './my-code?bookmarklet';
+import bookmarklet from './my-code?bookmarklet'
 
 document.querySelector('#app').innerHTML = `
 	<a class="button" href="${bookmarklet}">
 		Run
 	</a>
-`;
+`
 ```
 </details>
 
@@ -62,7 +62,7 @@ document.querySelector('#app').innerHTML = `
 
 ```astro
 ---
-import bookmarklet from './my-code?bookmarklet';
+import bookmarklet from './my-code?bookmarklet'
 ---
 
 <a href={bookmarklet}>
@@ -75,8 +75,8 @@ import bookmarklet from './my-code?bookmarklet';
 <summary>Lit</summary>
 
 ```js
-import { LitElement,  html } from 'lit';
-import bookmarklet from './my-code?bookmarklet';
+import { LitElement,  html } from 'lit'
+import bookmarklet from './my-code?bookmarklet'
 
 @customElement('bookmarklet')
 export class Bookmarklet extends LitElement {
@@ -85,7 +85,7 @@ export class Bookmarklet extends LitElement {
 			<a class="button" href=${bookmarklet}>
 				Run
 			</a>
-		`;
+		`
 	}
 }
 ```
@@ -95,14 +95,14 @@ export class Bookmarklet extends LitElement {
 <summary>Preact</summary>
 
 ```tsx
-import bookmarklet from './my-code?bookmarklet';
+import bookmarklet from './my-code?bookmarklet'
 
 export function Bookmarklet() {
 	return (
 		<a href={bookmarklet}>
 			Run
 		</a>
-	);
+	)
 }
 ```
 </details>
@@ -112,7 +112,7 @@ export function Bookmarklet() {
 
 ```svelte
 <script>
-	import bookmarklet from './my-code?bookmarklet';
+	import bookmarklet from './my-code?bookmarklet'
 </script>
 
 <a href={bookmarklet}>
@@ -126,7 +126,7 @@ export function Bookmarklet() {
 
 ```vue
 <script setup>
-	import bookmarklet from './my-code?bookmarklet';
+	import bookmarklet from './my-code?bookmarklet'
 </script>
 
 <template>
