@@ -35,7 +35,7 @@ export default defineConfig({
 });
 ```
 
-See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder vanilla JavaScript and framework-specific implementations.
+See the [examples folder](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) vanilla JavaScript and framework-specific implementations.
 
 ### TypeScript
 
