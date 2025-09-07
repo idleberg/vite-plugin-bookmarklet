@@ -34,7 +34,6 @@ export default defineConfig({
 	plugins: [bookmarklet()],
 });
 ```
-```
 
 See the [examples](https://github.com/idleberg/vite-plugin-bookmarklet/tree/main/examples) folder vanilla JavaScript and framework-specific implementations.
 
