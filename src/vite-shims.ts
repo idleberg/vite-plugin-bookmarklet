@@ -1,5 +1,6 @@
 /**
- * This file contains utility functions adapted from Vite's source code.
+ * This file contains utility functions adapted from Vite's source code. To keep
+ * track of changes, they are linked to their original source (Vite v7.0.0).
  */
 
 /**
