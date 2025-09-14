@@ -1,72 +1,72 @@
 {
-  "name": "vite-plugin-bookmarklet",
-  "version": "0.3.1",
-  "description": "A Vite plugin to import scripts as bookmarklets",
-  "license": "MIT",
-  "author": "Jan T. Sott",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/idleberg/vite-plugin-bookmarklet.git"
-  },
-  "keywords": [
-    "vite-plugin",
-    "bookmarklet"
-  ],
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/plugin.d.ts",
-      "import": "./dist/plugin.js"
-    },
-    "./client": {
-      "types": "./client.d.ts"
-    }
-  },
-  "types": "./dist/plugin.d.ts",
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
-  "files": [
-    "dist/",
-    "client.d.ts",
-    "LICENSE",
-    "README.md"
-  ],
-  "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
-    "lint": "biome check --no-errors-on-unmatched --vcs-enabled=true --vcs-use-ignore-file=true",
-    "prepack": "npm run build",
-    "prepare": "lefthook install",
-    "publish:jsr": "deno publish",
-    "publish:npm": "np --any-branch",
-    "server": "vite",
-    "test": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:*'",
-    "test:e2e": "playwright test",
-    "test:unit": "vitest run"
-  },
-  "dependencies": {
-    "log-symbols": "^7.0.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.3",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@playwright/test": "^1.55.0",
-    "@total-typescript/tsconfig": "^1.0.4",
-    "@types/node": "^24.3.1",
-    "@vitest/browser": "^3.2.4",
-    "concurrently": "^9.2.1",
-    "lefthook": "^1.12.3",
-    "np": "^10.2.0",
-    "playwright": "^1.55.0",
-    "tsdown": "^0.14.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "vitest": "^3.2.4"
-  },
-  "peerDependencies": {
-    "vite": "^5.0.0 || ^6.0.0 || >=7.0.0"
-  },
-  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
+	"name": "vite-plugin-bookmarklet",
+	"version": "0.3.1",
+	"description": "A Vite plugin to import scripts as bookmarklets",
+	"license": "MIT",
+	"author": "Jan T. Sott",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/idleberg/vite-plugin-bookmarklet.git"
+	},
+	"keywords": [
+		"vite-plugin",
+		"bookmarklet"
+	],
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/plugin.d.ts",
+			"import": "./dist/plugin.js"
+		},
+		"./client": {
+			"types": "./client.d.ts"
+		}
+	},
+	"types": "./dist/plugin.d.ts",
+	"engines": {
+		"node": "^20.19.0 || >=22.12.0"
+	},
+	"files": [
+		"dist/",
+		"client.d.ts",
+		"LICENSE",
+		"README.md"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"dev": "tsdown --watch",
+		"lint": "biome check",
+		"prepack": "npm run build",
+		"prepare": "lefthook install",
+		"publish:jsr": "deno publish",
+		"publish:npm": "np --any-branch",
+		"server": "vite",
+		"test": "concurrently -n 'server,client' -c 'blue,green' 'npm:test:*'",
+		"test:e2e": "playwright test",
+		"test:unit": "vitest run"
+	},
+	"dependencies": {
+		"log-symbols": "^7.0.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@idleberg/configs": "^0.1.0",
+		"@playwright/test": "^1.55.0",
+		"@total-typescript/tsconfig": "^1.0.4",
+		"@types/node": "^24.3.1",
+		"@vitest/browser": "^3.2.4",
+		"concurrently": "^9.2.1",
+		"lefthook": "^1.12.3",
+		"np": "^10.2.0",
+		"playwright": "^1.55.0",
+		"tsdown": "^0.14.2",
+		"typescript": "^5.9.2",
+		"vite": "^7.1.4",
+		"vitest": "^3.2.4"
+	},
+	"peerDependencies": {
+		"vite": "^5.0.0 || ^6.0.0 || >=7.0.0"
+	},
+	"packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
