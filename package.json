@@ -16,7 +16,7 @@
 	"exports": {
 		".": {
 			"types": "./dist/plugin.d.ts",
-			"import": "./dist/plugin.js"
+			"import": "./dist/plugin.mjs"
 		},
 		"./client": {
 			"types": "./client.d.ts"
@@ -51,20 +51,20 @@
 		"log-symbols": "^7.0.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^20.1.0",
-		"@commitlint/config-conventional": "^20.0.0",
+		"@commitlint/cli": "^20.2.0",
+		"@commitlint/config-conventional": "^20.2.0",
 		"@e18e/cli": "^0.3.1",
-		"@idleberg/configs": "^0.3.1",
-		"@playwright/test": "^1.56.1",
-		"@types/node": "^24.9.1",
-		"@vitest/browser": "^4.0.1",
+		"@idleberg/configs": "^0.3.3",
+		"@playwright/test": "^1.57.0",
+		"@types/node": "^24.10.1",
+		"@vitest/browser": "^4.0.15",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
-		"playwright": "^1.56.1",
-		"tsdown": "^0.15.9",
+		"playwright": "^1.57.0",
+		"tsdown": "^0.17.0",
 		"typescript": "^5.9.3",
-		"vite": "^7.1.11",
-		"vitest": "^4.0.1"
+		"vite": "^7.2.6",
+		"vitest": "^4.0.15"
 	},
 	"peerDependencies": {
 		"vite": "^5.0.0 || ^6.0.0 || >=7.0.0"
