@@ -1,14 +1,16 @@
 import { expect, test } from '@playwright/test';
 
 test('bookmarklet link triggers alert', async ({ page }) => {
-	await page.goto('http://localhost:7007/');
+	// Set up the dialog listener BEFORE any action that could trigger it
+	const dialogPromise = page.waitForEvent('dialog');
 
-	// Listen for the alert dialog
-	page.once('dialog', async (dialog) => {
-		expect(dialog.message()).toBe('Hello, World!');
-		await dialog.dismiss();
-	});
+	await page.goto('http://localhost:7007/');
 
 	// Click the bookmarklet link
 	await page.click('a[href^="javascript:"]');
+
+	// Wait for and verify the dialog
+	const dialog = await dialogPromise;
+	expect(dialog.message()).toBe('Hello, World!');
+	await dialog.dismiss();
 });
