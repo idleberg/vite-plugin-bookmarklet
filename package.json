@@ -53,17 +53,16 @@
 	"devDependencies": {
 		"@commitlint/cli": "^20.2.0",
 		"@commitlint/config-conventional": "^20.2.0",
-		"@e18e/cli": "^0.3.1",
-		"@idleberg/configs": "^0.3.3",
+		"@idleberg/configs": "^0.4.1",
 		"@playwright/test": "^1.57.0",
 		"@types/node": "^24.10.1",
 		"@vitest/browser": "^4.0.15",
 		"concurrently": "^9.2.1",
 		"np": "^10.2.0",
 		"playwright": "^1.57.0",
-		"tsdown": "^0.17.0",
+		"tsdown": "^0.18.0",
 		"typescript": "^5.9.3",
-		"vite": "^7.2.6",
+		"vite": "^7.3.0",
 		"vitest": "^4.0.15"
 	},
 	"peerDependencies": {
