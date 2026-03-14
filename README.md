@@ -44,7 +44,7 @@ export default defineConfig({
 Take a look at the following implementations:
 
 <details>
-<summary>JavaScript</summary>
+<summary>Plain JavaScript</summary>
 
 ```js
 import bookmarklet from './my-code?bookmarklet'
