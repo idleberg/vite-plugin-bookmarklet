@@ -1,6 +1,6 @@
 {
 	"name": "@idleberg/vite-plugin-bookmarklet",
-	"version": "0.3.3",
+	"version": "0.4.0",
 	"exports": "./src/plugin.ts",
 	"imports": {
 		"vite": "npm:vite@^8.0.0"
