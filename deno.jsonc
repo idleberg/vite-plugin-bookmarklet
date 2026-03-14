@@ -2,6 +2,9 @@
 	"name": "@idleberg/vite-plugin-bookmarklet",
 	"version": "0.3.3",
 	"exports": "./src/plugin.ts",
+	"imports": {
+		"vite": "npm:vite@^8.0.0"
+	},
 	"publish": {
 		"include": ["src/", "client.d.ts", "jsr.json", "LICENSE", "README.md"]
 	}
