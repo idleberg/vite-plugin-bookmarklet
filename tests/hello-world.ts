@@ -1,1 +1,2 @@
-alert('Hello, World!');
+const message: string = 'Hello, World!';
+alert(message);
